@@ -4,6 +4,7 @@ class AppImageAssets {
   static const String onbardingTwo = '$_root/onboarding-2.PNG';
   static const String onbardingThree = '$_root/onboarding-3.PNG';
   static const String onbardingFour = '$_root/onboarding-4.PNG';
+  static const String letter = '$_root/letter.PNG';
 }
 
 class AppFontsAssets {

@@ -3,7 +3,7 @@ import 'package:ecommerce_app/core/localization/translations.dart';
 import 'package:ecommerce_app/core/routes/routes.dart';
 import 'package:ecommerce_app/core/service/services.dart';
 import 'package:ecommerce_app/core/themes/theme.dart';
-import 'package:ecommerce_app/view/choose_language.dart';
+import 'package:ecommerce_app/view/onboarding/screen/onboarding.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -26,7 +26,7 @@ class MainApp extends StatelessWidget {
       theme: MyTheme.mainTheme,
       debugShowCheckedModeBanner: false,
       home: const SafeArea(
-        child: ChooseLanguage(),
+        child: Onboarding(),
       ),
     );
   }

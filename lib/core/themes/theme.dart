@@ -4,6 +4,28 @@ import 'package:flutter/material.dart';
 
 class MyTheme {
   static final mainTheme = ThemeData(
+    inputDecorationTheme: InputDecorationTheme(
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(20),
+        borderSide: const BorderSide(
+          color: AppColors.grey,
+          width: 2,
+        ),
+      ),
+    ),
+    appBarTheme: const AppBarTheme(
+      elevation: 0,
+      centerTitle: true,
+      backgroundColor: Colors.transparent,
+      titleTextStyle: TextStyle(
+        color: AppColors.black,
+        fontWeight: FontWeight.w500,
+        fontSize: 20,
+      ),
+      iconTheme: IconThemeData(
+        color: AppColors.black,
+      ),
+    ),
     hintColor: AppColors.grey,
     fontFamily: AppFontsAssets.mainFont,
     primaryColor: AppColors.primaryColor,

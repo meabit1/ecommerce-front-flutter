@@ -29,7 +29,6 @@ class SignUp extends StatelessWidget {
                 controller: controller.emailController,
                 decoration: InputDecoration(
                   hintText: Tr.email.tr,
-                  border: InputBorder.none,
                 ),
               ),
               const SizedBox(height: 20),
@@ -37,7 +36,6 @@ class SignUp extends StatelessWidget {
                 controller: controller.userNameController,
                 decoration: InputDecoration(
                   hintText: Tr.username.tr,
-                  border: InputBorder.none,
                 ),
               ),
               const SizedBox(height: 20),
@@ -46,13 +44,14 @@ class SignUp extends StatelessWidget {
                 obscureText: true,
                 decoration: InputDecoration(
                   hintText: Tr.password.tr,
-                  border: InputBorder.none,
                   suffixIcon: const Icon(Icons.remove_red_eye_sharp),
                 ),
               ),
               const SizedBox(height: 20),
               CustomButton(
-                onPressed: () {},
+                onPressed: () {
+                  Get.toNamed(AppRoutes.signUpVerifyCode);
+                },
                 text: Tr.signUp.tr,
               ),
               const SizedBox(height: 20),

@@ -1,18 +1,28 @@
 import 'package:get/get.dart';
 
 class Tr extends Translations {
-  static const String signIn = 'Sign in';
-  static const String signUp = 'Sign up';
-  static const String username = 'Username';
-  static const String password = 'Password';
-  static const String forgotPassword = 'Forgot Password?';
-  static const String rememberMe = 'Remember me';
-  static const String dontHaveAnAccount = 'Don\'t have an acount?';
-  static const String email = 'Email';
-  static const String alreadyHaveAnAccount = 'Already have an acount?';
-  static const String chooseLanguage = 'Choose Language';
-  static const String continueWithDefaultLanguage =
-      'Continue With Default Language';
+  static const emailSent = 'Code has been sent to your email';
+  static const newPassword = 'New Password';
+  static const confirmPassword = 'Confirm Password';
+  static const submit = 'Submit';
+  static const resend = 'Resend';
+  static const verification = 'Verification';
+  static const enterVerif = 'Enter Verification Code';
+  static const verify = 'Verify';
+  static const ifYou = 'If you didn\'t receive code!';
+  static const enterEmail = 'Enter Email Adress';
+  static const send = 'send';
+  static const signIn = 'Sign in';
+  static const signUp = 'Sign up';
+  static const username = 'Username';
+  static const password = 'Password';
+  static const forgotPassword = 'Forgot Password';
+  static const rememberMe = 'Remember me';
+  static const dontHaveAnAccount = 'Don\'t have an acount?';
+  static const email = 'Email';
+  static const alreadyHaveAnAccount = 'Already have an acount?';
+  static const chooseLanguage = 'Choose Language';
+  static const continueWithDefaultLanguage = 'Continue With Default Language';
   static const String continueText = 'Continue';
   static const String skip = 'Skip';
   static const String chooseProduct = 'Choose Product';
@@ -31,14 +41,25 @@ class Tr extends Translations {
   @override
   Map<String, Map<String, String>> get keys => {
         'ar': {
+          emailSent: 'تم ارسال الرمز الى البريد الاكتروني الخاص بك',
+          newPassword: 'كلمة سر جديدة',
+          submit: 'تم',
+          confirmPassword: 'تأكيد كلمة السر',
+          resend: 'ارسل مرة اخرى',
+          verification: 'التأكيد',
+          enterVerif: 'أدخل رمز التأكيد',
+          verify: 'تأكيد',
+          ifYou: 'في حالة عدم استلام الرمز',
+          enterEmail: 'ادخل البريد الالكتروني',
+          send: 'ارسل',
           signIn: 'تسجيل الدخول',
           signUp: 'انشاء حساب',
           username: 'اسم المستخدم',
           password: 'كلمة السر',
-          forgotPassword: 'هل نسيت كلمة السر؟',
+          forgotPassword: 'نسيت كلمة السر',
           rememberMe: 'تذكرني',
           dontHaveAnAccount: 'لا تملك حساب؟',
-          email: 'Email',
+          email: 'البريد الالكتروني',
           alreadyHaveAnAccount: 'Already have an acount?',
           chooseLanguage: 'اختر اللغة',
           continueWithDefaultLanguage: 'استمر بلغة الجهاز',

@@ -29,16 +29,15 @@ class Login extends StatelessWidget {
                 controller: controller.usernameController,
                 decoration: InputDecoration(
                   hintText: Tr.username.tr,
-                  border: InputBorder.none,
                 ),
               ),
+              const SizedBox(height: 20),
               TextField(
                 controller: controller.passwordController,
                 obscureText: true,
                 decoration: InputDecoration(
                   hintText: Tr.password.tr,
-                  border: InputBorder.none,
-                  suffix: IconButton(
+                  suffixIcon: IconButton(
                     onPressed: () {},
                     icon: const Icon(Icons.remove_red_eye_sharp),
                   ),
@@ -57,7 +56,9 @@ class Login extends StatelessWidget {
                     ],
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.toNamed(AppRoutes.forgotPassword);
+                    },
                     child: Text(
                       Tr.forgotPassword.tr,
                     ),
