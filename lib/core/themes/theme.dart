@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 class MyTheme {
   static final mainTheme = ThemeData(
+    hintColor: AppColors.grey,
     fontFamily: AppFontsAssets.mainFont,
     primaryColor: AppColors.primaryColor,
     elevatedButtonTheme: const ElevatedButtonThemeData(
@@ -20,12 +21,15 @@ class MyTheme {
         fontSize: 23,
       ),
       bodyLarge: TextStyle(
-        color: AppColors.grey,
+        color: AppColors.darkGrey,
         fontSize: 17,
         fontWeight: FontWeight.w500,
       ),
       bodyMedium: TextStyle(
         color: Colors.white,
+      ),
+      bodySmall: TextStyle(
+        fontSize: 14,
       ),
     ),
   );

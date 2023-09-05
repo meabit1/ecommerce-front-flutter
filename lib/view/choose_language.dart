@@ -1,7 +1,9 @@
 import 'package:country_flags/country_flags.dart';
 import 'package:ecommerce_app/core/constant/colors.dart';
 import 'package:ecommerce_app/core/localization/change_local.dart';
+import 'package:ecommerce_app/core/localization/translations.dart';
 import 'package:ecommerce_app/core/routes/routes.dart';
+import 'package:ecommerce_app/core/widget/custom_botton.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -17,7 +19,7 @@ class ChooseLanguage extends StatelessWidget {
           children: [
             const SizedBox(height: 100),
             Text(
-              '1'.tr,
+              Tr.chooseLanguage.tr,
               style: Theme.of(context).textTheme.displayLarge,
             ),
             const SizedBox(height: 40),
@@ -25,14 +27,11 @@ class ChooseLanguage extends StatelessWidget {
             const SizedBox(height: 40),
             const _Language(code: 'sa', text: '   العربية'),
             const SizedBox(height: 40),
-            ElevatedButton(
+            CustomButton(
               onPressed: () {
                 Get.offNamed(AppRoutes.onboardingRoute);
               },
-              child: Text(
-                '2'.tr,
-                style: Theme.of(context).textTheme.bodyMedium,
-              ),
+              text: Tr.continueWithDefaultLanguage.tr,
             ),
           ],
         ),
@@ -50,13 +49,18 @@ class _Language extends GetView<ChangeLocaleController> {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        controller.changeLanguage(code);
+        if (code == 'sa') {
+          controller.changeLanguage('ar');
+        } else {
+          controller.changeLanguage('en');
+        }
+
         Get.offNamed(AppRoutes.onboardingRoute);
       },
       child: Container(
         padding: const EdgeInsets.all(8),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(20),
           color: AppColors.lightGrey,
         ),
         child: Row(

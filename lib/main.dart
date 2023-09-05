@@ -2,7 +2,7 @@ import 'package:ecommerce_app/core/localization/change_local.dart';
 import 'package:ecommerce_app/core/localization/translations.dart';
 import 'package:ecommerce_app/core/routes/routes.dart';
 import 'package:ecommerce_app/core/service/services.dart';
-import 'package:ecommerce_app/core/shared/theme.dart';
+import 'package:ecommerce_app/core/themes/theme.dart';
 import 'package:ecommerce_app/view/choose_language.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -21,7 +21,7 @@ class MainApp extends StatelessWidget {
     final localeController = Get.put(ChangeLocaleController());
     return GetMaterialApp(
       locale: localeController.language,
-      translations: MyTranlations(),
+      translations: Tr(),
       routes: AppRoutes.routes,
       theme: MyTheme.mainTheme,
       debugShowCheckedModeBanner: false,

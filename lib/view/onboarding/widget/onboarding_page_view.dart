@@ -19,22 +19,23 @@ class OnboardingPageView extends GetView<OnBoardingControllerImpl> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              const SizedBox(height: 20),
               Text(
-                onboardingList[index].title,
+                onboardingList[index].title.tr,
                 style: Theme.of(context).textTheme.displayLarge,
               ),
-              const SizedBox(height: 30),
+              const SizedBox(height: 20),
               Image.asset(
                 onboardingList[index].imageAsset,
                 scale: 0.6,
               ),
-              const SizedBox(height: 30),
+              const SizedBox(height: 20),
               Container(
                 width: double.infinity,
                 height: 80,
                 alignment: Alignment.center,
                 child: Text(
-                  onboardingList[index].body,
+                  onboardingList[index].body.tr,
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.bodyLarge,
                 ),

@@ -4,14 +4,14 @@ import 'package:ecommerce_app/core/widget/custom_botton.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../controller/auth/login_controller.dart';
+import '../../../controller/auth/sign_up_controller.dart';
 
-class Login extends StatelessWidget {
-  const Login({super.key});
+class SignUp extends StatelessWidget {
+  const SignUp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(LoginController());
+    final controller = Get.put(SignUpController());
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(20.0),
@@ -21,70 +21,56 @@ class Login extends StatelessWidget {
             children: [
               const SizedBox(height: 80),
               Text(
-                Tr.signIn.tr,
+                Tr.signUp.tr,
                 style: Theme.of(context).textTheme.displayLarge,
               ),
-              const SizedBox(height: 80),
+              const SizedBox(height: 30),
               TextField(
-                controller: controller.usernameController,
+                controller: controller.emailController,
+                decoration: InputDecoration(
+                  hintText: Tr.email.tr,
+                  border: InputBorder.none,
+                ),
+              ),
+              const SizedBox(height: 20),
+              TextField(
+                controller: controller.userNameController,
                 decoration: InputDecoration(
                   hintText: Tr.username.tr,
                   border: InputBorder.none,
                 ),
               ),
+              const SizedBox(height: 20),
               TextField(
                 controller: controller.passwordController,
                 obscureText: true,
                 decoration: InputDecoration(
                   hintText: Tr.password.tr,
                   border: InputBorder.none,
-                  suffix: IconButton(
-                    onPressed: () {},
-                    icon: const Icon(Icons.remove_red_eye_sharp),
-                  ),
+                  suffixIcon: const Icon(Icons.remove_red_eye_sharp),
                 ),
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    children: [
-                      Checkbox(value: false, onChanged: (value) {}),
-                      Text(
-                        Tr.rememberMe.tr,
-                        style: Theme.of(context).textTheme.bodySmall,
-                      ),
-                    ],
-                  ),
-                  TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      Tr.forgotPassword.tr,
-                    ),
-                  ),
-                ],
               ),
               const SizedBox(height: 20),
               CustomButton(
                 onPressed: () {},
-                text: Tr.signIn.tr,
+                text: Tr.signUp.tr,
               ),
-              const SizedBox(height: 50),
+              const SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    Tr.dontHaveAnAccount.tr,
+                    Tr.alreadyHaveAnAccount.tr,
                     style: Theme.of(context).textTheme.bodySmall,
                   ),
                   TextButton(
                     onPressed: () {
-                      Get.offNamed(AppRoutes.signUpRoute);
+                      Get.offNamed(AppRoutes.loginRoute);
                     },
-                    child: Text(Tr.signUp.tr),
+                    child: Text(Tr.signIn.tr),
                   )
                 ],
-              )
+              ),
             ],
           ),
         ),

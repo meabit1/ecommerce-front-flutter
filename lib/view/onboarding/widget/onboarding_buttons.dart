@@ -18,7 +18,7 @@ class OnboardingButtons extends StatelessWidget {
           onPressed: () {
             controller.next();
           },
-          child: const Text('Continue'),
+          child: Text('Continue'.tr),
         ),
       ),
       const SizedBox(height: 10),
@@ -26,7 +26,7 @@ class OnboardingButtons extends StatelessWidget {
           onPressed: () {
             Get.offNamed(AppRoutes.loginRoute);
           },
-          child: const Text('Skip')),
+          child: Text('Skip'.tr)),
       const SizedBox(height: 30),
     ]);
   }

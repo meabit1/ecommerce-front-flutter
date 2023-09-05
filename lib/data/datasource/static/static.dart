@@ -1,29 +1,26 @@
 import 'package:ecommerce_app/core/constant/strings.dart';
+import 'package:ecommerce_app/core/localization/translations.dart';
 import 'package:ecommerce_app/data/model/onboarding_model.dart';
 
 List<OnboardingModel> onboardingList = [
   OnboardingModel(
-    title: 'Choose Product',
-    body:
-        'We Have a 100k+ Products.Choose\n Your product from our\nE-commerce shop. ',
+    title: Tr.chooseProduct,
+    body: Tr.weHave100kProducts,
     imageAsset: AppImageAssets.onbardingOne,
   ),
   OnboardingModel(
-    title: 'Easy & Safe Payment',
-    body:
-        'Easy Chekout & Safe Payment \n method. Trusted by our Customers \n from all over the world.',
+    title: Tr.easyAndSafePayment,
+    body: Tr.easyCheckoutAndSafePayment,
     imageAsset: AppImageAssets.onbardingTwo,
   ),
   OnboardingModel(
-    title: 'Track Your Order',
-    body:
-        'Best Tracker has been Used For\nTracking your order. You\'ll know where\nyour product is at the moment.',
+    title: Tr.trackYourOrder,
+    body: Tr.bestTrackerUsedForTracking,
     imageAsset: AppImageAssets.onbardingThree,
   ),
   OnboardingModel(
-    title: 'Fast Delivery',
-    body:
-        'Reliable And Fast Delivary. We\nDeliver your product the fastest way possible.',
+    title: Tr.fastDelivery,
+    body: Tr.reliableAndFastDelivery,
     imageAsset: AppImageAssets.onbardingFour,
   ),
 ];
