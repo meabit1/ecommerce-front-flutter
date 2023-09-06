@@ -3,11 +3,10 @@ import 'package:get/get.dart';
 
 class ForgotPasswordController extends GetxController {
   late TextEditingController emailController;
-
+  final key = GlobalKey<FormState>();
   @override
   void onInit() {
     emailController = TextEditingController();
-
     super.onInit();
   }
 

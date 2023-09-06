@@ -9,4 +9,5 @@ class AppImageAssets {
 
 class AppFontsAssets {
   static const mainFont = 'Poppins';
+  static const arabicFont = 'Cairo';
 }

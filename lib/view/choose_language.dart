@@ -49,11 +49,7 @@ class _Language extends GetView<ChangeLocaleController> {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        if (code == 'sa') {
-          controller.changeLanguage('ar');
-        } else {
-          controller.changeLanguage('en');
-        }
+        controller.changeLanguage(code);
 
         Get.offNamed(AppRoutes.onboardingRoute);
       },

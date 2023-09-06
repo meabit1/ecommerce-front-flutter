@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/core/constant/strings.dart';
+import 'package:ecommerce_app/view/auth/widget/success_dialogue.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -35,7 +36,10 @@ class SignUpVerifyCode extends StatelessWidget {
               const SizedBox(height: 30),
               CustomButton(
                 onPressed: () {
-                  // Get.offAllNamed(AppRoutes.resetPassword);
+                  Get.dialog(
+                    barrierDismissible: false,
+                    const SuccessDialog(),
+                  );
                 },
                 text: Tr.verify.tr,
               ),

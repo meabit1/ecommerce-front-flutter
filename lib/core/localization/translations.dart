@@ -1,6 +1,16 @@
 import 'package:get/get.dart';
 
 class Tr extends Translations {
+  static const stay = 'Stay';
+  static const cancel = 'Cancel';
+  static const warning = 'Warning!';
+  static const yourAbout = 'Your About to leave the app !!';
+  static const weekPassword = 'Week Password!';
+  static const invalidUsername = 'Invalid Username!';
+  static const invalidEmail = 'Invalid Email!';
+  static const succesOperation =
+      'Operation Has Been Finished Successfully.\n Enjoy! ';
+  static const success = 'Success';
   static const emailSent = 'Code has been sent to your email';
   static const newPassword = 'New Password';
   static const confirmPassword = 'Confirm Password';
@@ -41,6 +51,15 @@ class Tr extends Translations {
   @override
   Map<String, Map<String, String>> get keys => {
         'ar': {
+          stay: 'البقاء',
+          warning: '!تحذير',
+          cancel: 'الغاء',
+          yourAbout: '!!انت على وشك مغادرة التطبيق',
+          weekPassword: 'كلمة السر ضعيفة',
+          invalidUsername: 'اسم مستخدم خاطئ',
+          invalidEmail: 'بريد الكتروني خاطئ',
+          succesOperation: 'لقد تمت العملية بنجاح .\nاستمتع!',
+          success: 'تمت العملية بنجاح',
           emailSent: 'تم ارسال الرمز الى البريد الاكتروني الخاص بك',
           newPassword: 'كلمة سر جديدة',
           submit: 'تم',
@@ -60,7 +79,7 @@ class Tr extends Translations {
           rememberMe: 'تذكرني',
           dontHaveAnAccount: 'لا تملك حساب؟',
           email: 'البريد الالكتروني',
-          alreadyHaveAnAccount: 'Already have an acount?',
+          alreadyHaveAnAccount: 'لديك حساب ؟',
           chooseLanguage: 'اختر اللغة',
           continueWithDefaultLanguage: 'استمر بلغة الجهاز',
           continueText: 'استمر',

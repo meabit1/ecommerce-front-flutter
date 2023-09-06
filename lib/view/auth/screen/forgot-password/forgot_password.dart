@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/core/function/valid_input.dart';
 import 'package:ecommerce_app/core/localization/translations.dart';
 import 'package:ecommerce_app/core/widget/custom_botton.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +12,6 @@ class ForgotPassword extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(ForgotPasswordController());
     return Scaffold(
       appBar: AppBar(
         title: Text(Tr.forgotPassword.tr),
@@ -19,34 +19,40 @@ class ForgotPassword extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              const SizedBox(height: 60),
-              Text(
-                Tr.enterEmail.tr,
-                style: Theme.of(context).textTheme.bodyLarge,
+          child: GetBuilder<ForgotPasswordController>(
+            builder: (controller) => Form(
+              key: controller.key,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  const SizedBox(height: 60),
+                  Text(
+                    Tr.enterEmail.tr,
+                    style: Theme.of(context).textTheme.bodyLarge,
+                  ),
+                  const SizedBox(height: 20),
+                  TextFormField(
+                    validator: (value) => validInput(value, InputType.email),
+                    controller: controller.emailController,
+                    decoration: InputDecoration(hintText: Tr.email.tr),
+                  ),
+                  const SizedBox(height: 30),
+                  CustomButton(
+                    onPressed: () {
+                      Get.toNamed(AppRoutes.verifyCode);
+                    },
+                    text: Tr.send.tr,
+                  ),
+                  const SizedBox(height: 30),
+                  TextButton(
+                    onPressed: () {
+                      Get.back();
+                    },
+                    child: Text(Tr.signIn.tr),
+                  ),
+                ],
               ),
-              const SizedBox(height: 20),
-              TextField(
-                controller: controller.emailController,
-                decoration: InputDecoration(hintText: Tr.email.tr),
-              ),
-              const SizedBox(height: 30),
-              CustomButton(
-                onPressed: () {
-                  Get.toNamed(AppRoutes.verifyCode);
-                },
-                text: Tr.send.tr,
-              ),
-              const SizedBox(height: 30),
-              TextButton(
-                onPressed: () {
-                  Get.back();
-                },
-                child: Text(Tr.signIn.tr),
-              ),
-            ],
+            ),
           ),
         ),
       ),

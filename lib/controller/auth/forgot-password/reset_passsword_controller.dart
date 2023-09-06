@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 class ResetPasswordController extends GetxController {
   late TextEditingController passwordController;
   late TextEditingController confirmPasswordController;
+  final key = GlobalKey<FormState>();
 
   @override
   void onInit() {
